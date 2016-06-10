@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "eslint": "eslint ./ --cache",
-    "test": "babel-node ./node_modules/.bin/karma start karma.conf.js",
+    "test": "babel-node ./node_modules/karma/bin/karma start karma.conf.js",
     "build": "babel ./src --out-dir ./dist --source-maps",
     "gitdown": "gitdown ./.gitdown/README.md --output-file ./README.md",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
