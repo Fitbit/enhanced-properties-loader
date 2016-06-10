@@ -8,7 +8,7 @@
     "src/"
   ],
   "scripts": {
-    "clean": "rm -rf ./dist && rm -rf ./coverage",
+    "clean": "rm -rf ./dist",
     "eslint": "eslint ./ --cache",
     "test": "babel-node ./node_modules/.bin/karma start karma.conf.js",
     "build": "babel ./src --out-dir ./dist --source-maps",
