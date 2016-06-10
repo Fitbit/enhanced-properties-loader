@@ -53,6 +53,7 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.7.0",
     "phantomjs-prebuilt": "^2.1.7",
+    "semantic-release": "^4.3.5",
     "travis-after-all": "^1.4.4",
     "wallaby-webpack": "^0.0.22",
     "webpack": "^1.13.1",
