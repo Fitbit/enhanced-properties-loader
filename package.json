@@ -1,6 +1,5 @@
 {
   "name": "enhanced-properties-loader",
-  "version": "0.1.0",
   "description": "`*.properties` loader for webpack",
   "main": "dist/index.js",
   "files": [
