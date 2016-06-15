@@ -1,7 +1,8 @@
 import {
     defaultsDeep,
     cloneDeep,
-    merge
+    merge,
+    kebabCase
 } from 'lodash';
 import properties from 'properties';
 import loaderUtils from 'loader-utils';
@@ -19,7 +20,7 @@ const DEFAULT_OPTIONS = {
  * @private
  * @type {String}
  */
-const OPTIONS_PROPERTY = 'properties';
+const OPTIONS_PROPERTY = kebabCase('enhanced-properties');
 
 /**
  * @param {*} content
