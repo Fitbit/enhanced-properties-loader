@@ -32,12 +32,13 @@ export default function(content) {
     }
 
     const query = loaderUtils.parseQuery(this.query),
-        options = merge({}, cloneDeep(query), this.options[OPTIONS_PROPERTY]),
+        globalOptions = this.options[query.config || OPTIONS_PROPERTY] || {},
+        localOptions = merge({}, cloneDeep(query), globalOptions),
         callback = this.async();
 
-    defaultsDeep(options, DEFAULT_OPTIONS);
+    defaultsDeep(localOptions, DEFAULT_OPTIONS);
 
-    properties.parse(content, options, (err, result = {}) => {
+    properties.parse(content, localOptions, (err, result = {}) => {
         callback(err, result);
     });
 }
