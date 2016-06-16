@@ -21,6 +21,17 @@ const DEFAULT_OPTIONS = {
 const CONFIG_KEY = kebabCase('enhanced-properties');
 
 /**
+ * @private
+ * @param {*} loaderContext
+ * @returns {Object}
+ */
+const getOptions = loaderContext => {
+    const options = loaderUtils.getLoaderConfig(loaderContext, CONFIG_KEY);
+
+    return defaultsDeep(options, DEFAULT_OPTIONS);
+};
+
+/**
  * @param {*} content
  * @returns {void}
  */
@@ -29,10 +40,8 @@ export default function(content) {
         this.cacheable();
     }
 
-    const options = loaderUtils.getLoaderConfig(this, CONFIG_KEY),
+    const options = getOptions(this),
         callback = this.async();
-
-    defaultsDeep(options, DEFAULT_OPTIONS);
 
     properties.parse(content, options, (err, result = {}) => {
         callback(err, result);
