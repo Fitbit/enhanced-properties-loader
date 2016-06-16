@@ -28,6 +28,6 @@ before_script:
 script:
   - npm run clean
   - npm run eslint
-  - npm run test
+  - npm run cover
 after_script:
   - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && .travis/after-all.sh || false'
