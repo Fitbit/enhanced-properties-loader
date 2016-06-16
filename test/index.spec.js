@@ -8,7 +8,6 @@ describe('enhanced-properties-loader', () => {
         loader.call({
             async: () => callback,
             cacheable: () => {},
-            resourcePath,
             options,
             query: query ? `?${JSON.stringify(query)}` : ''
         }, readFileSync(resourcePath, { encoding: 'utf8' }));
