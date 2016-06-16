@@ -1,7 +1,5 @@
 import {
     defaultsDeep,
-    cloneDeep,
-    merge,
     kebabCase
 } from 'lodash';
 import properties from 'properties';
@@ -20,7 +18,7 @@ const DEFAULT_OPTIONS = {
  * @private
  * @type {String}
  */
-const OPTIONS_PROPERTY = kebabCase('enhanced-properties');
+const CONFIG_KEY = kebabCase('enhanced-properties');
 
 /**
  * @param {*} content
@@ -31,14 +29,12 @@ export default function(content) {
         this.cacheable();
     }
 
-    const query = loaderUtils.parseQuery(this.query),
-        globalOptions = this.options[query.config || OPTIONS_PROPERTY] || {},
-        localOptions = merge({}, cloneDeep(query), globalOptions),
+    const options = loaderUtils.getLoaderConfig(this, CONFIG_KEY),
         callback = this.async();
 
-    defaultsDeep(localOptions, DEFAULT_OPTIONS);
+    defaultsDeep(options, DEFAULT_OPTIONS);
 
-    properties.parse(content, localOptions, (err, result = {}) => {
+    properties.parse(content, options, (err, result = {}) => {
         callback(err, result);
     });
 }
