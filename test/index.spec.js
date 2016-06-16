@@ -1,3 +1,6 @@
+import {
+    readFileSync
+} from 'fs';
 import loader from '../src'
 
 describe('enhanced-properties-loader', () => {
@@ -17,6 +20,6 @@ describe('enhanced-properties-loader', () => {
         loader.call({
             async: () => callback,
             options: {}
-        }, `foo=1\nbar.bar1=true`);
+        }, readFileSync('./test/fixtures/index.properties', { encoding: 'utf8' }));
     });
 });
