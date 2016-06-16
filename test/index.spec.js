@@ -4,8 +4,16 @@ import {
 import loader from '../src'
 
 describe('enhanced-properties-loader', () => {
+    const makeRequest = (resourcePath, callback, options = {}) => {
+        loader.call({
+            async: () => callback,
+            resourcePath,
+            options: options
+        }, readFileSync(resourcePath, { encoding: 'utf8' }));
+    };
+
     it('should load `*.properties` successfully', done => {
-        const callback = (err, properties) => {
+        makeRequest('./test/fixtures/index.properties', (err, properties) => {
             expect(err).toBe(null);
             expect(properties).toEqual({
                 foo: 1,
@@ -15,11 +23,6 @@ describe('enhanced-properties-loader', () => {
             });
 
             done();
-        };
-
-        loader.call({
-            async: () => callback,
-            options: {}
-        }, readFileSync('./test/fixtures/index.properties', { encoding: 'utf8' }));
+        });
     });
 });
