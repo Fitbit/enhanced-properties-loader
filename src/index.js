@@ -1,6 +1,6 @@
 import {
     defaultsDeep,
-    kebabCase
+    camelCase
 } from 'lodash';
 import properties from 'properties';
 import loaderUtils from 'loader-utils';
@@ -18,7 +18,7 @@ const DEFAULT_OPTIONS = {
  * @private
  * @type {String}
  */
-const CONFIG_KEY = kebabCase('enhanced-properties');
+const CONFIG_KEY = camelCase('enhanced-properties');
 
 /**
  * @private
