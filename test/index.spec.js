@@ -1,7 +1,7 @@
 import {
     readFileSync
 } from 'fs';
-import loader from '../src'
+import loader from '../src';
 
 describe('enhanced-properties-loader', () => {
     const makeRequest = (resourcePath, callback, options = {}, query = null) => {
