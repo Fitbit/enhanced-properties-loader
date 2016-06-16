@@ -1,16 +1,18 @@
 import {
-    readFileSync
+    readFile
 } from 'fs';
 import loader from '../src';
 
 describe('enhanced-properties-loader', () => {
     const makeRequest = (resourcePath, callback, options = {}, query = null) => {
-        loader.call({
-            async: () => callback,
-            cacheable: () => {},
-            options,
-            query: query ? `?${JSON.stringify(query)}` : ''
-        }, readFileSync(resourcePath, { encoding: 'utf8' }));
+        readFile(resourcePath, { encoding: 'utf8' }, (err, content) => {
+            loader.call({
+                async: () => callback,
+                cacheable: () => {},
+                options,
+                query: query ? `?${JSON.stringify(query)}` : ''
+            }, content);
+        });
     };
 
     it('should load `*.properties` with `namespaces`', done => {
