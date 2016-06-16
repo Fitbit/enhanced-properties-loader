@@ -7,6 +7,7 @@ describe('enhanced-properties-loader', () => {
     const makeRequest = (resourcePath, callback, options = {}, query = null) => {
         loader.call({
             async: () => callback,
+            cacheable: () => {},
             resourcePath,
             options,
             query: query ? `?${JSON.stringify(query)}` : ''
