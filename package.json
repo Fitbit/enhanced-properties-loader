@@ -32,7 +32,7 @@
   "homepage": "https://github.com/mdreizin/enhanced-properties-loader",
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-eslint": "^6.0.4",
+    "babel-eslint": "^6.0.5",
     "babel-istanbul": "^0.8.0",
     "babel-loader": "^6.2.4",
     "babel-plugin-add-module-exports": "^0.2.1",
