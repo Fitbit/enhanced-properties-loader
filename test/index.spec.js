@@ -1,20 +1,6 @@
-import {
-    readFile
-} from 'fs';
-import loader from '../src';
+import makeRequest from './helpers/makeRequest';
 
 describe('enhanced-properties-loader', () => {
-    const makeRequest = (resourcePath, callback, options = {}, query = null) => {
-        readFile(resourcePath, { encoding: 'utf8' }, (err, content) => {
-            loader.call({
-                async: () => callback,
-                cacheable: () => {},
-                options,
-                query: query ? `?${JSON.stringify(query)}` : ''
-            }, content);
-        });
-    };
-
     it('should load `*.properties` with `namespaces`', done => {
         makeRequest('./test/fixtures/index.properties', (err, properties) => {
             expect(err).toBe(null);

@@ -1,35 +1,5 @@
-import {
-    defaultsDeep,
-    camelCase
-} from 'lodash';
 import properties from 'properties';
-import loaderUtils from 'loader-utils';
-
-/**
- * @private
- * @type {Object}
- */
-const DEFAULT_OPTIONS = {
-    namespaces: true,
-    variables: true
-};
-
-/**
- * @private
- * @type {String}
- */
-const CONFIG_KEY = camelCase('enhanced-properties');
-
-/**
- * @private
- * @param {*} loaderContext
- * @returns {Object}
- */
-const getOptions = loaderContext => {
-    const options = loaderUtils.getLoaderConfig(loaderContext, CONFIG_KEY);
-
-    return defaultsDeep(options, DEFAULT_OPTIONS);
-};
+import getOptions from './getOptions';
 
 /**
  * @param {*} content
