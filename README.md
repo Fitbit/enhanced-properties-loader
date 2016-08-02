@@ -7,8 +7,7 @@
 [![Development Dependency Status](https://img.shields.io/david/dev/mdreizin/enhanced-properties-loader.svg?style=flat-square)](https://david-dm.org/mdreizin/enhanced-properties-loader#info=devDependencies)
 
 <h1 id="enhanced-properties-loader">enhanced-properties-loader</h1>
-
-`*.properties` loader for webpack
+> `*.properties` loader for webpack
 
 <h2 id="enhanced-properties-loader-usage">Usage</h2>
 

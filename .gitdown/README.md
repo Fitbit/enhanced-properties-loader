@@ -7,8 +7,7 @@
 {"gitdown": "badge", "name": "david-dev"}
 
 # {"gitdown": "gitinfo", "name": "name"}
-
-`*.properties` loader for webpack
+> `*.properties` loader for webpack
 
 ## Usage
 
