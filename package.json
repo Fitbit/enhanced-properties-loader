@@ -54,7 +54,7 @@
     "eslint": "^3.0.0",
     "eslint-config-mdreizin": "^1.1.1",
     "eslint-plugin-babel": "^3.3.0",
-    "gitdown": "^2.4.9",
+    "gitdown": "^2.4.10",
     "jasmine": "^2.4.1",
     "jasmine-spec-reporter": "^2.5.0",
     "nyc": "^7.1.0",
