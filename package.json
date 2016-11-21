@@ -53,7 +53,7 @@
     "codeclimate-test-reporter": "^0.4.0",
     "eslint": "^3.0.0",
     "eslint-config-mdreizin": "^1.1.1",
-    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-babel": "^4.0.0",
     "gitdown": "^2.4.10",
     "jasmine": "^2.4.1",
     "jasmine-spec-reporter": "^2.5.0",
