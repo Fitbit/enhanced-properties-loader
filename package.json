@@ -31,16 +31,16 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mdreizin/enhanced-properties-loader.git"
+    "url": "https://github.com/Fitbit/enhanced-properties-loader.git"
   },
   "keywords": [
     "webpack",
     "properties"
   ],
   "bugs": {
-    "url": "https://github.com/mdreizin/enhanced-properties-loader/issues"
+    "url": "https://github.com/Fitbit/enhanced-properties-loader/issues"
   },
-  "homepage": "https://github.com/mdreizin/enhanced-properties-loader",
+  "homepage": "https://github.com/Fitbit/enhanced-properties-loader",
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-eslint": "^7.0.0",
