@@ -6,11 +6,9 @@
 [![Dependency Status](https://img.shields.io/david/Fitbit/enhanced-properties-loader.svg?style=flat-square)](https://david-dm.org/Fitbit/enhanced-properties-loader)
 [![Development Dependency Status](https://img.shields.io/david/dev/Fitbit/enhanced-properties-loader.svg?style=flat-square)](https://david-dm.org/Fitbit/enhanced-properties-loader#info=devDependencies)
 
-<a name="enhanced-properties-loader"></a>
 # enhanced-properties-loader
 > `*.properties` loader for webpack
 
-<a name="enhanced-properties-loader-installation"></a>
 ## Installation
 
 ```bash
@@ -23,7 +21,6 @@ or
 yarn add json-loader enhanced-properties-loader --dev
 ```
 
-<a name="enhanced-properties-loader-usage"></a>
 ## Usage
 
 `./index.properties`
@@ -31,16 +28,15 @@ yarn add json-loader enhanced-properties-loader --dev
 ```properties
 foo=bar
 bar.baz=qux
-
 ```
 
 `./index.js`
 
+<!-- eslint no-console: "allow" -->
 ```javascript
 var properties = require('!json!enhanced-properties!./index.properties');
 
 console.log(properties); // Object { foo: "bar", bar: { baz: "qux" } }
-
 ```
 
 `./webpack.config.js`
@@ -54,9 +50,4 @@ module.exports = {
         }]
     }
 };
-
 ```
-
-<a name="enhanced-properties-loader-options"></a>
-## Options
-
