@@ -7,6 +7,8 @@
 [![Development Dependency Status](https://img.shields.io/david/dev/Fitbit/enhanced-properties-loader.svg?style=flat-square)](https://david-dm.org/Fitbit/enhanced-properties-loader#info=devDependencies)
 
 # enhanced-properties-loader
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Fitbit/enhanced-properties-loader.svg)](https://greenkeeper.io/)
 > `*.properties` loader for webpack
 
 ## Installation
