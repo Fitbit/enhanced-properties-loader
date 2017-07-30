@@ -33,7 +33,7 @@ bar.baz=qux
 
 `./index.js`
 
-<!-- eslint no-console: "allow" -->
+<!-- eslint no-console: 0 -->
 ```javascript
 var properties = require('!json!enhanced-properties!./index.properties');
 
@@ -45,9 +45,9 @@ console.log(properties); // Object { foo: "bar", bar: { baz: "qux" } }
 ```javascript
 module.exports = {
     module: {
-        loaders: [{
+        rules: [{
             test: /\.properties$/,
-            loader: 'json!enhanced-properties'
+            loader: 'enhanced-properties-loader'
         }]
     }
 };
