@@ -2,22 +2,27 @@
   "name": "enhanced-properties-loader",
   "description": "`*.properties` loader for webpack",
   "main": "dist/index.js",
-  "files": ["dist/", "src/"],
+  "files": [
+    "dist/",
+    "src/"
+  ],
   "scripts": {
     "clean": "rm -rf ./dist ./coverage",
     "eslint": "eslint --ext=js,md ./ --cache",
     "build": "babel src --out-dir dist --source-maps",
     "test": "babel-node jasmine.js",
-    "cover":
-      "NODE_ENV=test nyc --reporter=lcov jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "cover": "NODE_ENV=test nyc --reporter=lcov jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "postcover": "nyc report",
     "codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info",
-    "semantic-release":
-      "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "nyc": {
-    "include": ["src/*.js"],
-    "require": ["babel-register"],
+    "include": [
+      "src/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
     "sourceMap": false,
     "instrument": false
   },
@@ -27,7 +32,10 @@
     "type": "git",
     "url": "https://github.com/Fitbit/enhanced-properties-loader.git"
   },
-  "keywords": ["webpack", "properties"],
+  "keywords": [
+    "webpack",
+    "properties"
+  ],
   "bugs": {
     "url": "https://github.com/Fitbit/enhanced-properties-loader/issues"
   },
@@ -47,7 +55,8 @@
     "jasmine": "^2.7.0",
     "jasmine-spec-reporter": "^4.1.1",
     "nyc": "^11.1.0",
-    "semantic-release": "^7.0.1"
+    "semantic-release": "^15.1.7",
+    "travis-deploy-once": "^4.4.1"
   },
   "dependencies": {
     "babel-runtime": "^6.25.0",
