@@ -30,26 +30,26 @@
   },
   "homepage": "https://github.com/Fitbit/enhanced-properties-loader",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
     "babel-plugin-istanbul": "^4.1.4",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.24.1",
-    "eslint": "^4.3.0",
-    "eslint-plugin-babel": "^4.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-markdown": "^1.0.0-beta.6",
-    "jasmine": "^2.7.0",
-    "jasmine-spec-reporter": "^4.1.1",
-    "nyc": "^11.1.0",
+    "jasmine": "^3.1.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "nyc": "^11.7.1",
     "semantic-release": "^15.1.7",
     "travis-deploy-once": "^4.4.1"
   },
   "dependencies": {
-    "babel-runtime": "^6.25.0",
+    "babel-runtime": "^6.26.0",
     "loader-utils": "^1.1.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
     "properties": "^1.2.1"
   }
 }
