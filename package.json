@@ -12,9 +12,7 @@
     "build": "babel src --out-dir dist --source-maps",
     "test": "babel-node jasmine.js",
     "cover": "NODE_ENV=test nyc --reporter=lcov jasmine JASMINE_CONFIG_PATH=jasmine.json",
-    "postcover": "nyc report",
-    "codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "postcover": "nyc report"
   },
   "nyc": {
     "include": [
@@ -48,7 +46,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.24.1",
-    "codeclimate-test-reporter": "^0.5.0",
     "eslint": "^4.3.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-markdown": "^1.0.0-beta.6",
