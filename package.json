@@ -51,5 +51,8 @@
     "loader-utils": "^1.1.0",
     "lodash": "^4.17.10",
     "properties": "^1.2.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
