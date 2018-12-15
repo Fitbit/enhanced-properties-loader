@@ -44,7 +44,7 @@
     "jasmine-spec-reporter": "^4.2.1",
     "nyc": "^11.7.1",
     "semantic-release": "^15.1.7",
-    "travis-deploy-once": "^4.4.1"
+    "travis-deploy-once": "^5.0.11"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
